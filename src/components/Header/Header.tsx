@@ -1,10 +1,11 @@
 import styles from './Header.module.scss'
+import logo from '../../assets/image/icon-logo.svg'
 
 function Header() {
   return (
     <header className={styles.header}>
       <a href="" className={styles.header__logo}>
-        <img src="../../../image/icon-logo.svg" alt="" className={styles.header__img}/>
+        <img src={logo} alt="" className={styles.header__img}/>
         <h2 className={styles.header__text}>гросс маркет</h2>
       </a>
       <div className={styles.header__info}>

@@ -1,4 +1,5 @@
 import styles from './Wrapper.module.scss'
+import Valentin from '../../assets/image/Valentin.png'
 
 function Wrapper() {
   return (
@@ -20,7 +21,7 @@ function Wrapper() {
           </div>
         </div>
         <div className={styles.wrapper__photo}>
-          <img src='../../../image/Valentin.png' alt="" />
+          <img src={Valentin} alt="" />
           <div className={styles.wrapper__vacancy}>
             <h3>
               пекарь

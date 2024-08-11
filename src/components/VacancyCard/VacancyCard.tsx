@@ -2,6 +2,7 @@ import { IVacancy } from "../../data/Interface"
 import styles from "./VacancyCard.module.scss"
 
 function VacancyCard({vacancy, image}: IVacancy) {
+  const imageUrl = image
   return (
     <li className={styles.vacancy__list_item}>
       <div className={styles.vacancy__name}>
@@ -12,7 +13,7 @@ function VacancyCard({vacancy, image}: IVacancy) {
         Доставка товара по магазинам и гипермаркетам компании в обслуживаемом регионе
         </p>
       </div>
-      <img src={image} alt="" />
+      <img src={imageUrl} alt="" />
     </li>
   )
 }

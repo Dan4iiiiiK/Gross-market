@@ -1,5 +1,5 @@
 import styles from './Wrapper.module.scss'
-import Valentin from '../../assets/image/Valentin.png'
+import Valentin from '../../assets/Valentin.png'
 
 function Wrapper() {
   return (

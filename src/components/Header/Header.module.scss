@@ -1,0 +1,92 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.header {
+  padding: 32px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include width;
+  margin: 0 auto;
+
+    &__logo{
+      display: flex;
+      align-items: center;
+    }
+
+    &__info {
+      display: flex;
+      align-items: center;
+      
+      @media(max-width: 375px) {
+        display: none;
+      }
+    }
+
+    &__button_tel {
+      display: none;
+      background-color: $White;
+      border: 0;
+
+      @media(max-width: 375px) {
+        display: block;
+      }
+    }
+    
+  @media (max-width: 1440px) {
+    @include width(320px, 1110px);
+    margin: 0 auto;  
+  }
+
+  @media (max-width: 1024px) {
+    @include width(320px, 900px);
+    margin: 0 auto;  
+  }
+
+  @media (max-width: 768px) {
+    @include width(320px, 690px);
+    margin: 0 auto;  
+  }
+
+  @media (max-width: 375px) {
+    @include width(320px, 346px);
+    margin: 0 auto;  
+  }
+
+  @media (max-width: 320px) {
+    @include width(200px, 300px);
+    margin: 0 auto;  
+  }
+}
+
+.header__img {
+  margin-right: 16px;
+}
+
+.header__text {
+  color: $Black;
+  line-height: 40.58px;
+  @include fonts(32px, 500);
+
+    @media (max-width: 375px) {
+      @include fonts(24px, 500);
+    }
+}
+
+.header__tel {
+  @include fonts(18px, 500);
+  line-height: 22.82px;
+  margin-right: 32px;
+  color: $Black;
+  z-index: 1;
+}
+
+.header__button {
+  @include fonts(18px, 500);
+  color: $Black;
+  border-radius: 8px;
+  padding: 12px 16px;
+  background-color: $Yellow;
+  z-index: 1;
+}
+

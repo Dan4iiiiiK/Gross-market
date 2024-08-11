@@ -1,0 +1,9 @@
+@mixin width($min: 320px, $max: 1590px) {
+  max-width: $max;
+  min-width: $min;
+}
+
+@mixin fonts($size: 18px , $wieght: 500) {
+  font-size: $size;
+  font-weight: $wieght;
+}

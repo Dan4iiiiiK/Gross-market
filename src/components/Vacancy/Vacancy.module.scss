@@ -1,0 +1,106 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.vacancy {
+  margin-top: 72px;
+
+}
+
+.vacancy__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  @include width;
+
+    h2{
+      @include fonts(32px, 500);
+      line-height: 40.58px;
+
+        @media(max-width: 375px) {
+          @include fonts(24px, 500);
+          line-height: 30.43px;
+        }
+
+        @media(max-width: 320px) {
+          @include fonts(22px, 500);
+        }
+    }
+
+    @media (max-width: 1440px) {
+      @include width(320px, 1110px);
+      margin: 0 auto;  
+    }
+  
+    @media (max-width: 1024px) {
+      @include width(320px, 900px);
+      margin: 0 auto;  
+    }
+  
+    @media (max-width: 768px) {
+      @include width(320px, 690px);
+      margin: 0 auto;  
+    }
+  
+    @media (max-width: 375px) {
+      @include width(320px, 346px);
+      margin: 0 auto;  
+    }
+  
+    @media (max-width: 320px) {
+      @include width(200px, 300px);
+      margin: 0 auto;  
+    }
+
+    div {
+      @media(max-width: 768px) {
+        display: none;
+      }
+    }
+}
+
+.vacancy__list{
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+  margin-top: 32px; 
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media(max-width:768px) {
+    &::-webkit-scrollbar {
+      display: block;
+    }
+  }
+}
+
+.vacancy__button {
+  background-color: $White;
+
+  svg {
+    margin: 4px 7px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
+.vacancy__button_disable {
+  background-color: $White;
+  cursor: auto;
+
+  svg {
+    margin: 4px 7px;
+
+    path {
+      opacity: 0.2;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
+}

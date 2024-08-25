@@ -1,7 +1,7 @@
 import Footer from "./components/Footer/Footer"
 import Header from "./components/Header/Header"
 import Instagramm from "./components/Instagramm/Instagramm"
-import Map from "./components/Map/Map"
+import MapComponent from "./components/Map/MapComponent"
 import Vacancy from "./components/Vacancy/Vacancy"
 import Wrapper from "./components/Wrapper/Wrapper"
 
@@ -13,7 +13,7 @@ function App() {
       <Wrapper/>
       <Vacancy/>
       <Instagramm/>
-      <Map/>
+      <MapComponent/>
       <Footer/>
     </>
   )

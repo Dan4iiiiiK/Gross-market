@@ -32,3 +32,28 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ReactModal__Overlay {
+  z-index: 2;
+  background-color: rgb(12 11 11 / 47%) !important;
+
+    .ReactModal__Content {
+      border: 0 !important;
+      border-radius: 8px !important;
+      padding: 35px 35px 35px 95px !important;
+    }
+}
+
+.acitve__header_head {
+  @include fonts(24px, 500);
+  line-height: 30.43px;
+  margin-top: 0;
+}
+
+

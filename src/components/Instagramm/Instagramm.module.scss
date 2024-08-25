@@ -1,0 +1,234 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.instBlock {
+  @include width;
+  margin: 72px auto 69px auto;
+
+  @media (max-width: 1440px) {
+    @include width(320px, 1110px);
+  }
+
+  @media (max-width: 1024px) {
+    @include width(320px, 900px);
+  }
+
+  @media (max-width: 768px) {
+    @include width(320px, 690px);
+  }
+
+  @media (max-width: 690px) {
+    @include width(320px, 608px);
+  }
+
+  @media (max-width: 690px) {
+    @include width(320px, 608px);
+  }
+
+  @media (max-width: 608px) {
+    @include width(320px, 530px);
+  }
+
+  @media (max-width: 530px) {
+    @include width(320px, 452px);
+  }
+
+  @media (max-width: 452px) {
+    @include width(320px, 374px);
+  }
+
+  @media (max-width: 375px) {
+    @include width(320px, 346px);  
+  }
+
+  @media (max-width: 320px) {
+    @include width(200px, 300px);
+  }
+
+    &__head {
+      @include fonts(32px, 500);
+      line-height: 40.58px;
+
+        @media(max-width: 375px) {
+          @include fonts(24px, 500);
+          line-height: 30.43px;
+        }
+
+        @media(max-width: 320px) {
+          @include fonts(22px, 500);
+        }
+    }
+
+    &__list {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 30px;
+
+      &_item {
+        background-color: $Gray;
+        border-radius: 8px;
+        transition-duration: .3s;
+        transition-property: background-color, box-shadow;
+        transition-timing-function: linear;
+        animation: list 1s linear;
+
+        &:first-child {
+          width: 780px;
+          height: 780px;
+          grid-column: span 2;
+          grid-row: span 2;
+
+          @media(max-width: 1440px) {
+            width: 540px;
+            height: 540px;
+          }
+
+          @media(max-width: 1024px) {
+            width: 435px;
+            height: 435px;
+          }
+
+          @media(max-width: 768px) {
+            width: 330px;
+            height: 330px;
+            grid-column: 1 / 7;
+            grid-row: span 2;
+          }
+
+          @media(max-width: 690px) {
+            width: 289px;
+            height: 289px;
+          }
+
+          @media(max-width: 608px) {
+            width: 250px;
+            height: 250px;
+          }
+
+          @media(max-width: 530px) {
+            width: 211px;
+            height: 211px;
+          }
+
+          @media(max-width: 452px) {
+            width: 172px;
+            height: 172px;
+          }
+
+          @media(max-width: 375px) {
+            width: 100%;
+            height: 346px;
+            grid-column: 1;
+            grid-row: 1;
+          }
+        }
+
+        &:hover {
+          background-color: $White;
+          box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+        }
+
+        @media(max-width: 768px) {
+          &:nth-child(2) {
+            width: 330px;
+            height: 330px;
+            grid-column: 7 / 13;
+            grid-row: span 2;
+
+            @media(max-width: 690px) {
+              width: 289px;
+              height: 289px;
+            }
+
+            @media(max-width: 608px) {
+              width: 250px;
+              height: 250px;
+            }
+
+            @media(max-width: 530px) {
+              width: 211px;
+              height: 211px;
+            }
+
+            @media(max-width: 452px) {
+              width: 172px;
+              height: 172px;
+            }
+
+            @media(max-width: 375px) {
+              width: 100%;
+              height: 346px;
+              grid-column: 1;
+              grid-row: 2;
+            }
+          }
+        }
+
+        @media(max-width: 768px) {
+          grid-column: span 4;
+        }
+
+        @media(max-width: 375px) {
+          grid-column: 1;
+        }
+
+      }
+
+      &_notactive {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        margin-top: 32px;
+        display: grid;
+        gap: 30px;
+        animation: list 1s linear;
+
+        @media(max-width: 768px) {
+          grid-template-columns: repeat(12, 1fr);
+          grid-template-rows: repeat(3, 1fr);
+        }
+        
+        @media (max-width: 375px) {
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(5, 1fr);
+        }
+      }
+
+      @media(max-width: 768px) {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+      }
+
+      @media (max-width: 375px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(13, 1fr);
+      }
+    }
+
+    &__button {
+      width: 100%;
+      border-radius: 8px;
+      background-color: $Gray;
+      padding: 12px 0;
+      @include fonts;
+      transition-duration: .3s;
+      transition-property: background-color, box-shadow;
+      transition-timing-function: linear;
+      margin-top: 30px;
+      
+      &:hover {
+        background-color: $White;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+      }
+    }
+}
+
+@keyframes list {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,101 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.map {
+  @include width;
+  margin: 0 auto;
+
+    @media (max-width: 1440px) {
+        @include width(320px, 1110px);
+      }
+
+      @media (max-width: 1024px) {
+        @include width(320px, 900px);
+      }
+      
+  &__head {
+    @include fonts(32px, 500);
+    line-height: 40.58px;
+
+      @media(max-width: 375px) {
+        @include fonts(24px, 500);
+        line-height: 30.43px;
+      }
+
+      @media(max-width: 320px) {
+        @include fonts(22px, 500);
+      }
+
+      @media (max-width: 768px) {
+        @include width(320px, 690px);
+        margin: 0 auto;
+      }
+
+      @media (max-width: 690px) {
+        @include width(320px, 608px);
+      }
+
+      @media (max-width: 608px) {
+        @include width(320px, 530px);
+      }
+
+      @media (max-width: 530px) {
+        @include width(320px, 452px);
+      }
+
+      @media (max-width: 452px) {
+        @include width(320px, 374px);
+      }
+
+      @media (max-width: 375px) {
+        @include width(320px, 346px);  
+      }
+
+      @media (max-width: 320px) {
+        @include width(200px, 300px);
+      }
+
+  }
+
+  &__block {
+    margin-top: 32px;
+    width: 100%;
+    height: 540px;
+  }
+}
+
+.map_container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.button__block {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 24px;
+}
+
+.button {
+  background-color: $White;
+  line-height: 22.82px;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 8px;
+  color: $Black;
+  @include fonts;
+  transition: .3s background-color linear;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &:hover {
+    background-color: lightyellow;
+  }
+
+  &_active {
+    background-color: $Yellow;
+  }
+}

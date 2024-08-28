@@ -1,13 +1,10 @@
 import styles from './Footer.module.scss'
 import logo from '../../assets/icon-logo.svg'
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import Modal from 'react-modal';
 
 function Footer() {
   const [modalIsOpen, setModalIsOpen] = useState(false)
-  // const [scroll, setScroll] = useState(0)
-  const headerRef = useRef<HTMLHeadingElement>(null)
-  const headerBlockRef = useRef<HTMLHeadingElement>(null)
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -17,32 +14,10 @@ function Footer() {
     setModalIsOpen(false);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      // setScroll(window.scrollY);
-      if (headerRef.current) {
-       headerRef.current.style.fontSize = `24px`
-       headerRef.current.style.marginTop = '0px'
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [])
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (headerBlockRef.current) {
-        headerBlockRef.current.style.padding = '30px 0'
-      }
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  })
-
   const modalContent = (
     <div className={styles.modal}>
-      <div className={styles.modal__header} ref={headerBlockRef}>
-        <h1 className={styles.modal__header_head} ref={headerRef}>Обработка данных</h1>
+      <div className={`${styles.modal__header} ${styles.header_scroll}`}>
+        <h1 className={`${styles.modal__header_head} ${styles.header_scroll_text}`} >Обработка данных</h1>
         <button onClick={closeModal} className={styles.modal__header_close}>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M21 3L3 21" stroke="black" strokeWidth="2"/>
@@ -128,3 +103,14 @@ function Footer() {
 }
 
 export default Footer
+    // const [scroll, setScroll] = useState(0)
+  
+  
+    // const handleScroll = () => {
+    //   setScroll(window.scrollY)
+    // }
+  
+    // useEffect (() => {
+    //   window.addEventListener("scroll", handleScroll)
+    //   return () => window.removeEventListener('scroll', handleScroll)
+    // }, [])

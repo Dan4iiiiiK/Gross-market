@@ -53,6 +53,14 @@
         }
       }
   }
+
+  @media(max-width: 768px) {
+    margin-top: 0;
+  }
+  @media(max-width: 375px) {
+    position: relative;
+    box-shadow: 0px -100px 50px 17px #F5F5F5;
+  }
 }
 
 .footer__logo {
@@ -163,13 +171,28 @@
     display: flex;
     justify-content: space-between;
     position: sticky;
-    top: -35px;
+    top: 0;
     background-color: $White;
+    padding: 32px 0;
 
     &_head {
       @include fonts(72px, 500);
       margin-top: 16px;
       line-height: 66px;
+      transition-duration: .3s;
+      transition-property: font-size, line-height;
+      transition-timing-function: linear;
+
+      @media(max-width: 768px) {
+        margin-top: 0;
+      }
+
+      @media(max-width: 375px) {
+        margin-top: 42px;
+        @include fonts(48px, 500);
+        line-height: 44px;
+      }
+    
     }
 
     &_close {
@@ -182,6 +205,10 @@
         background-color: $Gray;
       }
     }
+
+    @media(max-width:375px) {
+      padding: 24px 0;
+    }
   }
 
     &__content {
@@ -193,11 +220,25 @@
             font-weight: 500;
           }
 
+          &:first-child {
+            margin-top: 16px;
+
+            @media (max-width: 375px){
+              margin-top: 8px;
+            }
+          }
+
           span {
             @include fonts(14px, 400);
             line-height: 22px;
             color: $DarkGrey;
           }
+
+          @media (max-width: 375px) {
+            margin-top: 32px;
+          }
+
+          
         }
     }
 }
@@ -215,3 +256,12 @@
   margin-bottom: 24px;
 }
 
+.header_scroll {
+  align-items: center;
+}
+
+.header_scroll_text {
+  @include fonts(24px, 500);
+  line-height: 30.43px;
+  margin-top: 0;
+}

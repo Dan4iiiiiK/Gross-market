@@ -19,11 +19,14 @@ button {
   padding: 0;
 }
 
-h1, h2, h3, p {
-  margin: 0
+h1,
+h2,
+h3,
+p {
+  margin: 0;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -40,14 +43,25 @@ ol {
 }
 
 .ReactModal__Overlay {
-  z-index: 2;
+  z-index: 4;
   background-color: rgb(12 11 11 / 47%) !important;
 
-    .ReactModal__Content {
-      border: 0 !important;
-      border-radius: 8px !important;
-      padding: 35px 35px 35px 95px !important;
+  .ReactModal__Content {
+    border: 0 !important;
+    border-radius: 8px !important;
+    padding: 0 32px 32px 95px !important;
+    inset: 0 165px 0 165px !important;
+
+    @media(max-width: 768px) {
+      inset: 72px 45px 0 39px !important;
+      padding: 0 24px !important;
     }
+
+    @media(max-width: 375px) {
+      inset: 0 !important;
+      padding: 0 14px !important;
+    }
+  }
 }
 
 .acitve__header_head {
@@ -56,4 +70,23 @@ ol {
   margin-top: 0;
 }
 
+[class*= "ground-pane"] {
+  filter:grayscale(1);
+}
+
+.ymaps-2-1-79-image {
+  padding: 10px 13.21px 10px 14px;
+  background-repeat: no-repeat;
+  background-color: $White;
+  border-radius: 50%;
+  background-position: center !important;
+}
+
+// body.ReactModal__Body--open {
+//   overflow: hidden;
+// }
+
+// .ReactModal__Content {
+//   overflow: hidden !important;
+// } 
 

@@ -2,7 +2,7 @@ import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 import styles from "./Map.module.scss";
 import map from "../../data/map.json";
 import { useState } from "react";
-import logo from "../../assets/images/icon-logo.svg";
+import logo from "../../../public/assets/images/icon-logo.svg";
 
 function MapComponent() {
   const [filterText, setFilterText] = useState<"fs" | "yr" | "all">("all");

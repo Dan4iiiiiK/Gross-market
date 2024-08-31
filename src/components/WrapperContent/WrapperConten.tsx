@@ -10,7 +10,7 @@ function WrapperConten({name, text, vacancy, image, index, id}: ISlider) {
             <h1 className={styles.wrapper__content_head}>{text}</h1>
           </div>
           <div className={styles.wrapper__photo}>
-            <img src={`../../src/assets/${image}.png`} alt={name} />
+            <img src={`../../assets/images/${image}.png`} alt={name} />
             <div className={styles.wrapper__vacancy}>
               <h3>
                 {vacancy}

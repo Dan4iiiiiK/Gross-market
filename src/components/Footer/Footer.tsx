@@ -1,5 +1,5 @@
 import styles from './Footer.module.scss'
-import logo from '../../assets/images/icon-logo.svg'
+import logo from '../../../public/assets/images/icon-logo.svg'
 import { useState } from 'react'
 import Modal from 'react-modal';
 

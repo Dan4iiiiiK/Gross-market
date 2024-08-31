@@ -2,36 +2,36 @@
   {
     "vacancy": "товаровед",
     "id": 1,
-    "image": "../../assets/imges/Tovaroved.png"
+    "image": "./assets/images/Tovaroved.png"
   },
   {
     "vacancy": "водитель",
     "id": 2,
-    "image": "../../assets/imges/Voditel.png"
+    "image": "./assets/images/Voditel.png"
   },
   {
     "vacancy": "пекарь",
     "id": 3,
-    "image": "../../assets/imges/Pekar.png"
+    "image": "./assets/images/Pekar.png"
   },
   {
     "vacancy": "кассир",
     "id": 4,
-    "image": "../../assets/imges/Kassir.png"
+    "image": "./assets/images/Kassir.png"
   },
   {
     "vacancy": "продавец",
     "id": 5,
-    "image": "../../assets/imges/Prodavec.png"
+    "image": "./assets/images/Prodavec.png"
   },
   {
     "vacancy": "повар",
     "id": 6,
-    "image": "../../assets/imges/Povar.png"
+    "image": "./assets/images/Povar.png"
   },
   {
     "vacancy": "приёмщик",
     "id": 7,
-    "image": "../../assets/imges/Priemshik.png"
+    "image": "./assets/images/Priemshik.png"
   }
 ]
